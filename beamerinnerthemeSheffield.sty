@@ -1,0 +1,29 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+\mode<presentation>
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \coordinate (logopos) at ($(current page.north east) - (0.10, 0.10)$);
+  \node[anchor=north east] (sheflogo) at (logopos) {\includegraphics[width=2.5cm]{\sheflogo}};
+  \end{tikzpicture}
+}
+
+\defbeamertemplate{itemize item}{Sheffield}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\defbeamertemplate{itemize subitem}{Sheffield}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\triangleright$}}
+\defbeamertemplate{itemize subsubitem}{Sheffield}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$-$}}
+
+\setbeamertemplate{itemize item}[Sheffield]
+\setbeamertemplate{itemize subitem}[Sheffield]
+\setbeamertemplate{itemize subsubitem}[Sheffield]
+
+\mode<all>

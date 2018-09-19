@@ -1,0 +1,5 @@
+[
+  "test_arrays.py::test_build_array",
+  "test_arrays.py::test_copy_array",
+  "test_arrays.py::test_multiply_array"
+]

@@ -1,0 +1,71 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+%logo
+\def\sheflogo{shef_logo}
+
+%colors
+\definecolor{shefblue}{HTML}{1F145D}
+
+\definecolor{sgrey}{HTML}{606060}
+\definecolor{sgreylight}{HTML}{808080}
+\definecolor{sgreydark}{HTML}{303030}
+
+\mode<presentation>
+
+\setbeamercolor*{normal text}{fg=sgreydark,bg=white}
+\setbeamercolor*{alerted text}{fg=shefblue}
+\setbeamercolor*{example text}{fg=sgreydark}
+\setbeamercolor*{structure}{fg=shefblue}
+
+\providecommand*{\beamer@bftext@only}{%
+  \relax
+  \ifmmode
+    \expandafter\beamer@bftext@warning
+  \else
+    \expandafter\bfseries
+  \fi
+}
+\providecommand*{\beamer@bftext@warning}{%
+  \ClassWarning{beamer}
+    {Cannot use bold for alerted text in math mode}%
+}
+
+%\setbeamerfont{alerted text}{series=\beamer@bftext@only}
+
+\setbeamercolor{palette primary}{fg=sgreydark,bg=white}
+\setbeamercolor{palette secondary}{fg=sgreydark,bg=white}
+\setbeamercolor{palette tertiary}{fg=sgreydark,bg=white}
+\setbeamercolor{palette quaternary}{fg=sgreydark,bg=white}
+
+\setbeamercolor{title in head/foot}{fg=sgrey, bg=white}
+\setbeamercolor{author in head/foot}{fg=sgrey, bg=white}
+\setbeamercolor{date in head/foot}{fg=sgrey, bg=white}
+
+\setbeamercolor{sidebar}{bg=sgreydark!20}
+
+\setbeamercolor{palette sidebar primary}{fg=sgrey}
+\setbeamercolor{palette sidebar secondary}{fg=sgrey}
+\setbeamercolor{palette sidebar tertiary}{fg=sgrey}
+\setbeamercolor{palette sidebar quaternary}{fg=sgrey}
+
+\setbeamercolor{item projected}{fg=sgreydark,bg=sgreydark!20}
+
+\setbeamercolor*{block body}{}
+\setbeamercolor*{block body alerted}{}
+\setbeamercolor*{block body example}{}
+\setbeamercolor*{block title}{parent=structure}
+\setbeamercolor*{block title alerted}{parent=alerted text}
+\setbeamercolor*{block title example}{parent=example text}
+
+\setbeamercolor*{titlelike}{parent=structure}
+
+\mode
+<all>

@@ -1,0 +1,40 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+\mode<presentation>
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \coordinate (logopos) at ($(current page.north east) - (0.10, 0.10)$);
+  \node[anchor=north east] (sheflogo) at (logopos) {\includegraphics[width=2.5cm]{\sheflogo}};
+    \coordinate (cbmlogopos) at ($(current page.south west) + (0.00, 0.16)$);
+  \node[anchor=south west] (cbmlogo) at (cbmlogopos) {\includegraphics[width=1.2cm]{cbmlogo}};
+  \end{tikzpicture}
+}
+
+% Footnotes
+
+\renewcommand{\footnoterule}{
+\kern -3pt
+\moveright 1cm\vbox{\hrule width 5cm}\nointerlineskip
+\kern 2.6pt
+}
+\setbeamertemplate{footnote}
+{
+  \hspace{1.0cm}
+  \parindent 0em\noindent%
+  \raggedright
+  \hbox to 0.5em{\hfil\insertfootnotemark}\insertfootnotetext\par%
+}
+
+
+
+\mode<all>
